@@ -22,9 +22,9 @@ else:
 
 ec2 = boto3.resource(
     "ec2",
-    aws_access_key_id = "AKIAWMQTECKI3N3GNK53",
-    aws_secret_access_key = "NCi9o/XWyWVCU0yjSX5xy10tlX6JtZXWC+R2pBv7",
-    region_name= "ap-south-1")
+    aws_access_key_id = "Add Your Own",
+    aws_secret_access_key = "Add Your Own",
+    region_name= "add")
 
 def osLaunch():
     ec2.create_instances(
