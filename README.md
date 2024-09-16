@@ -25,8 +25,9 @@ Installation:
 
 Install required libraries:  
 Bash  
-pip install opencv-python cvzone boto3  
 Use code with caution.  
+  
+pip install opencv-python cvzone boto3
 
 Usage:  
 Replace the placeholder values for aws_access_key_id and aws_secret_access_key in the code with your actual AWS credentials (Important: Keep these credentials secure!).  
