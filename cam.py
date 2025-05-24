@@ -13,12 +13,6 @@ detector = HandDetector()
 myhand = detector.FindHands(photo)
 mylmlist = myhand[0][0]
 myfinger = detector.fingersup(mylmlist)
-if myfinger == [1, 1, 1, 1, 1]:
-    os.system("notepad")
-elif myfinger == [0, 1, 1, 0, 0]:
-    os.system("chrome")
-else:
-    print("idk")
 
 ec2 = boto3.resource(
     "ec2",
@@ -34,13 +28,95 @@ def osLaunch():
     MaxCount=1,
 )
 
-osLaunch()
 if myfinger == [1, 1, 1, 1, 1]:
     osLaunch()
     osLaunch()
     osLaunch()
     osLaunch()
     osLaunch()
+elif myfinger == [0, 0, 0, 0, 0]:
+    print("No finger detected hence number of instances launched = 0.")
 elif myfinger == [0, 1, 1, 0, 0]:
     osLaunch()
     osLaunch()
+elif myfinger == [0, 0, 1, 1, 0]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 1, 0, 1, 0]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 1, 0, 0, 0]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 1, 0, 0]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 0, 1, 0]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 0, 0, 1]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 1, 0, 0, 1]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 0, 1, 0, 1]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 0, 0, 1, 1]:
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 1, 1, 0, 0]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 1, 1, 0]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 1, 0, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 0, 1, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 1, 1, 1, 0]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 0, 1, 1, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [0, 1, 1, 0, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 1, 1, 1, 0]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 1, 1, 0, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 1, 0, 1, 1]:
+    osLaunch()
+    osLaunch()  
+    osLaunch()
+    osLaunch()
+elif myfinger == [1, 0, 1, 1, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()  
+    osLaunch()
+elif myfinger == [0, 1, 1, 1, 1]:
+    osLaunch()
+    osLaunch()
+    osLaunch()
+    osLaunch()  
+    
