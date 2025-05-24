@@ -10,15 +10,15 @@ cv2.imshow("my photo", photo)
 cv2.waitKey()
 cv2.destroyAllWindows()
 detector = HandDetector()
-myhand = detector.FindHands(photo)
+myhand = detector.findHands(photo)
 mylmlist = myhand[0][0]
-myfinger = detector.fingersup(mylmlist)
+myfinger = detector.fingersUp(mylmlist)
 
 ec2 = boto3.resource(
     "ec2",
-    aws_access_key_id = "Add Your Own",
-    aws_secret_access_key = "Add Your Own",
-    region_name= "add")
+    aws_access_key_id = "insert your access key",
+    aws_secret_access_key = "insert your secret key",
+    region_name= "insert your region name")
 
 def osLaunch():
     ec2.create_instances(
